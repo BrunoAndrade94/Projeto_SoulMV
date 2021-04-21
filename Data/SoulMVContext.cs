@@ -15,5 +15,7 @@ namespace SoulMV.Data
         }
 
         public DbSet<SoulMV.Models.Estoque> Estoque { get; set; }
+
+        public DbSet<SoulMV.Models.Produto> Produto { get; set; }
     }
 }

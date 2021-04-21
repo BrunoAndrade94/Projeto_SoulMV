@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SoulMV.Data;
 
 namespace SoulMV.Migrations
 {
     [DbContext(typeof(SoulMVContext))]
-    partial class SoulMVContextModelSnapshot : ModelSnapshot
+    [Migration("20210421020511_Segunda_Atualzacao")]
+    partial class Segunda_Atualzacao
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

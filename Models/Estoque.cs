@@ -9,6 +9,7 @@ namespace SoulMV.Models
     {
         public int Id { get; set; }
         public string Nome { get; set; }
+        //public IEnumerable<Produto> Produtos { get; set; } = new List<Produto>();
 
         public Estoque()
         {
