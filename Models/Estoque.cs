@@ -7,7 +7,17 @@ namespace SoulMV.Models
 {
     public class Estoque
     {
-        public int Codigo { get; set; }
+        public int Id { get; set; }
         public string Nome { get; set; }
+
+        public Estoque()
+        {
+        }
+
+        public Estoque(int codigo, string nome)
+        {
+            Id = codigo;
+            Nome = nome;
+        }
     }
 }

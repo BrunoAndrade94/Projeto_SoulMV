@@ -9,6 +9,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using SoulMV.Data;
 
 namespace SoulMV
 {
@@ -33,6 +35,11 @@ namespace SoulMV
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddDbContext<SoulMVContext>(options =>
+                    options.UseMySql(Configuration.GetConnectionString("SoulMVContext"), builder =>builder.MigrationsAssembly("SoulMV")));
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
